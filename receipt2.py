@@ -7,7 +7,7 @@ def main():
     PRODUCT_INDEX = 0
     NAME_INDEX = 1
     PRICE_INDEX = 2
-    TAX = 0.165
+    TAX = 0.06
 
     #Show all products but without the first line
     product_dict = read_dictionary("products.csv", PRODUCT_INDEX)
@@ -16,6 +16,7 @@ def main():
     # print()
     number_of_items = 0
     subtotal = 0
+    #taxamount = 0
 
 
     request_dict = read_dictionary("request.csv", PRODUCT_INDEX)
@@ -40,12 +41,17 @@ def main():
             price =  float(product[2])
             extprice = price*quantity
             subtotal += extprice
+            taxamount = subtotal * TAX
+            total = subtotal + taxamount
             print(f"{name} {quantity} {price}")
-        print(number_of_items)
-        print("subtotal: " + str(subtotal))
+        
+        print()
+        print(f"Number of items {number_of_items}") #12
+        print(f"Subtotal: {subtotal:.2f}") #15.26
+        
         taxamount = subtotal * TAX
-        print("tax: " + str(taxamount))
-        print("total: " + str(subtotal) + str(taxamount))
+        print(f"Tax: {taxamount:.2f}") #0.92
+        print(f"Total: {total:.2f}") #16.18
 
 
         try:            
@@ -65,15 +71,6 @@ def main():
         except FileNotFoundError as not_found_err:
             print(not_found_err)
 
-
-        # for items in reader:
-        #     key = items[0]
-        #     quantities = sum(item[1])
-        
-        #     print(f"Number of items: {quantities}") #12
-        #     print(f"Subtotal: {price}") #15.26
-        #     print(f"Sales tax: {price}") #0.92
-        #     print(f"Total: {price}") #16.18
 
     print()
     print("Thank you for shopping at the Inkom Emporium.")
