@@ -18,7 +18,6 @@ def main():
     subtotal = 0
     #taxamount = 0
 
-
     request_dict = read_dictionary("request.csv", PRODUCT_INDEX)
     #printing requested items, but without the product number
     # print("Requested Items")
