@@ -16,7 +16,8 @@ staff_of_chaos.py
 2. What real-world problem will your program address or help to solve?
 
 It will give me a random number so the user will not have to manually look up what magical effect
-will be used by the staff of chaos
+will be used by the staff of chaos. Basically it will lookup a random spell without having to
+consult the large libram.
 
 3. What will you learn from developing this program?
 
