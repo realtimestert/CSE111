@@ -1,10 +1,7 @@
 import random
 import csv
 import pytest
-from guizero import App
-
-app = App(title="Staff of Chaos")
-app.display()
+from guizero import App, Text, PushButton
 
 def main():
     #choice = input("Will you use the staff of Chaos? Y/N? ")
@@ -13,18 +10,38 @@ def main():
     
     #Prints out a list of all the magical effects.
     #print_list(random_magic)
+    def change_message():
+        message.value = "here we go again..."
+
+    # def rand_number(length, number=None):
+    #     if number == None:
+    #         number = "0123456789"
+
+    #     rand = ""
+    #     for i in range(length):
+    #         rand += random.choice(number)
+
+    #     message.value = rand
+    #     return rand
+        
+    app = App(title="Staff of Chaos")
+    message = Text(app, text = "Will you use the staff of chaos?")
     
-    print(random_number (4))
+    # Figure out why "TypError: 'str' object is not callable"
+    button = PushButton(app, text = "Do it", command = change_message)
+    app.display()
+    
+    # print(rand_number (4))
 
-def random_number(length, number=None):
-    if number == None:
-        number = "0123456789"
+# def rand_number(length, number=None):
+#     if number == None:
+#         number = "0123456789"
 
-    rand = ""
-    for i in range(length):
-        rand += random.choice(number)
+#     rand = []
+#     for i in range(length):
+#         rand += random.choice(number)
 
-    return rand
+#     return rand
 
 def read_compound_list(filename):
     """Read the text from a CSV file into a compound list.
