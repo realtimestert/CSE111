@@ -11,15 +11,17 @@ def main():
     #Prints out a list of all the magical effects.
     #print_list(random_magic)
     app_window()
-    print(rand_number (4))
 
 def app_window():
+    
+    # Nested Function
     def change_message():
-        message.value = "here we go again..."        
+        message.value = rand_number(4)        
+    
     app = App(title="Staff of Chaos")
     message = Text(app, text = "Will you use the staff of chaos?")
     
-    # Figure out why "TypError: 'str' object is not callable"
+    # Push the button to change the message
     button = PushButton(app, text = "Do it", command = change_message)
     app.display()
     
