@@ -1,6 +1,10 @@
 import random
 import csv
 import pytest
+from guizero import App
+
+app = App(title="Staff of Chaos")
+app.display()
 
 def main():
     #choice = input("Will you use the staff of Chaos? Y/N? ")
