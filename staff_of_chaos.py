@@ -10,20 +10,12 @@ def main():
     
     #Prints out a list of all the magical effects.
     #print_list(random_magic)
+    app_window()
+    print(rand_number (4))
+
+def app_window():
     def change_message():
-        message.value = "here we go again..."
-
-    # def rand_number(length, number=None):
-    #     if number == None:
-    #         number = "0123456789"
-
-    #     rand = ""
-    #     for i in range(length):
-    #         rand += random.choice(number)
-
-    #     message.value = rand
-    #     return rand
-        
+        message.value = "here we go again..."        
     app = App(title="Staff of Chaos")
     message = Text(app, text = "Will you use the staff of chaos?")
     
@@ -31,17 +23,16 @@ def main():
     button = PushButton(app, text = "Do it", command = change_message)
     app.display()
     
-    # print(rand_number (4))
 
-# def rand_number(length, number=None):
-#     if number == None:
-#         number = "0123456789"
+def rand_number(length, number=None):
+    if number == None:
+        number = "0123456789"
 
-#     rand = []
-#     for i in range(length):
-#         rand += random.choice(number)
+    rand = ""
+    for i in range(length):
+        rand += random.choice(number)
 
-#     return rand
+    return rand
 
 def read_compound_list(filename):
     """Read the text from a CSV file into a compound list.
