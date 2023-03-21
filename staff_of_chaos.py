@@ -9,7 +9,6 @@ def main():
     
     magic_dict = read_dictionary("10000_random.csv", MAGIC_INDEX)
     
-    print_list(magic_dict)
     #Prints out a list of all the magical effects.
     #print_list(random_magic)
     app_window()
