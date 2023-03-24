@@ -24,6 +24,7 @@ def main():
     # print(request)
 
     print("Inkom Emporium")
+    print(f"{current_date_and_time:%a %b %d %I:%M:%S %Y}")
     print()
     
     with open("request.csv", "rt") as csv_request:

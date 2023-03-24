@@ -6,18 +6,18 @@ def main():
 
     MAGIC_INDEX = 0
     RANDOM_MAGIC = 1
-    
-    magic_dict = read_dictionary("10000_random.csv", MAGIC_INDEX)
-    
-    #Prints out a list of all the magical effects.
-    #print_list(random_magic)
+
     app_window()
 
 def app_window():
     
-    # Nested Function
+    with open("10000_random.csv") as f:
+        words = f.readlines()
+        my_pick = random.choice(words)
+
+    # Nested Function?
     def change_message():
-        message.value = rand_number(4)  
+        message.value = my_pick  
 
     def change_message_2():
         message.value = "Okay"      
