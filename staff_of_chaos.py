@@ -3,22 +3,18 @@ import csv
 from guizero import App, Text, PushButton
 
 def main():
-
-    MAGIC_INDEX = 0
-    RANDOM_MAGIC = 1
-
     app_window()
 
 def app_window():
     
-    with open("10000_random.csv") as f:
-        words = f.readlines()
-        my_pick = random.choice(words)
-
-    # Nested Function?
+    # returns a random value from csv file and displays on the app window
     def change_message():
-        message.value = my_pick  
+        with open("10000_random.txt") as f:
+            words = f.readlines()
+            my_pick = random.choice(words)
+        message.value = my_pick
 
+    #return a random value from a txt file
     def change_message_2():
         message.value = "Okay"      
     
@@ -26,7 +22,7 @@ def app_window():
     message = Text(app, text = "Will you use the Staff of Chaos?")
     
     # Push the button to change the message
-    button1 = PushButton(app, align = "left", text = "Do it", command = change_message)
+    button1 = PushButton(app, align = "left", text = "Use it", command = change_message)
     button2 = PushButton(app, align = "right", text = "Don't", command = change_message_2)
     
     app.display()
