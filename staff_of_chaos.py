@@ -26,9 +26,16 @@ def app_window():
 
 def random_magic():
     with open("10000_random.txt") as f:
-            words = f.readlines()
-            magic = random.choice(words)
+        words = f.readlines()
+        magic = random.choice(words)
     return magic
+
+def random_phrase():
+    with open("no.txt"): as n:
+        words = n.readlines()
+        no = random.choice(words)
+    return no
+
 
 if __name__ == "__main__":
     main()
