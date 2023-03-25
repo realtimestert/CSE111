@@ -13,14 +13,14 @@ def app_window():
 
     #return a random value from a txt file
     def change_message_2():
-        message.value = "Okay"      
+        message.value = "The staff makes fun of you."      
     
     app = App(title="Staff of Chaos")
     message = Text(app, text = "Will you use the Staff of Chaos?")
     
     # Push the button to change the message
     button1 = PushButton(app, align = "left", text = "Use it", command = change_message)
-    button2 = PushButton(app, align = "right", text = "Don't", command = change_message_2)
+    button2 = PushButton(app, align = "right", text = random_no(), command = change_message_2)
     
     app.display()
 
@@ -30,12 +30,11 @@ def random_magic():
         magic = random.choice(words)
     return magic
 
-def random_phrase():
-    with open("no.txt"): as n:
-        words = n.readlines()
+def random_no():
+    with open("no.txt") as f:
+        words = f.readlines()
         no = random.choice(words)
     return no
-
 
 if __name__ == "__main__":
     main()
