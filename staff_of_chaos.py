@@ -22,7 +22,7 @@ def app_window():
     button1 = PushButton(app, align = "left", text = "Use it", command = change_message)
     button2 = PushButton(app, align = "right", text = random_no_button(), command = change_message_2)
 
-    picture = Picture(app, align = "center", image="bearsgif.gif")
+    #picture = Picture(app, align = "bottom", image="bearsgif.gif")
     
     app.display()
 
