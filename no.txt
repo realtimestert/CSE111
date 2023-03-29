@@ -4,5 +4,6 @@ nix
 negatory
 never
 forget it
-refuse
-reject
+refuse it
+reject it
+Dramatic "no!"

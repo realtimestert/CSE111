@@ -8,7 +8,7 @@ import pytest
 
 def test_random_magic():
     
-   filename = mktemp(dir= "." , prefix= "not" , suffix= ".txt")
+   # filename = mktemp(dir= "." , prefix= "not" , suffix= ".txt")
 
    assert random_magic() == ""
    assert random_magic() == ""
