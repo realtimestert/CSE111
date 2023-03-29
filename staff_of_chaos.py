@@ -39,7 +39,7 @@ def random_no_button():
     return no
 
 def random_no_press():
-    with open("no_press") as f:
+    with open("no_press.txt") as f:
         words = f.readlines()
         no_press = random.choice(words)
     return no_press
