@@ -21,7 +21,7 @@ def app_window():
         message.value = insults()    
     
     # areas where the text appears on the app
-    app = App(title="Staff of Chaos", height="600", bg="#F7EF81")
+    app = App(title="The Staff of Chaos", height="600", bg="#F7EF81")
 
     # Message that will be replaced once button1 is pressed
     message = Text(app, text = "Will you use the Staff of Chaos?")

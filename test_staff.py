@@ -16,4 +16,10 @@ def test_adjectives():
       word = adjectives()
       assert word in adjective
 
+def test_nouns():
+   noun = ["cretin", "swine", "goat herder", "milk-drinker", "child", "coward"]
+   for _ in range(46):
+      word = nouns()
+      assert word in noun
+
 pytest.main(["-v", "--tb=line", "-rN", __file__])
