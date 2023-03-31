@@ -21,9 +21,14 @@ def app_window():
         message.value = insults()    
     
     # areas where the text appears on the app
-    app = App(title="Staff of Chaos")
+    app = App(title="Staff of Chaos", height="600", bg="#F7EF81")
+
+    # Message that will be replaced once button1 is pressed
     message = Text(app, text = "Will you use the Staff of Chaos?")
+    
+    # Timing
     message2 = Text(app, align = "bottom", text = f"{current_date_and_time:%a %b %d %I:%M:%S %Y}")
+    
     #message3 = Text(app, align = "bottom,", text = f"{pop_counted(button1)}")
     
     # ai generated image. Dream by Wombo
@@ -71,10 +76,10 @@ def insults():
     insult = adjectives() + nouns()
     return insult
 
-def pop_counted(a):
-    pop_counted.counter += 1
-    return a.pop()
-pop_counted.counter = 0
+# def pop_counted(a):
+#     pop_counted.counter += 1
+#     return a.pop()
+# pop_counted.counter = 0
 
 if __name__ == "__main__":
     main()
