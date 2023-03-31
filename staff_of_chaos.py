@@ -36,6 +36,9 @@ def app_window():
     
     # Push the button to change the message
     button1 = PushButton(app, align = "left", text = "Use it", command = change_message)
+
+    # Changes the button text every time the program is opened
+    # Changes the text to a random insult
     button2 = PushButton(app, align = "right", text = random_no_button(), command = change_message_2)
 
     #picture = Picture(app, align = "bottom", image="bearsgif.gif")
