@@ -79,6 +79,10 @@ def insults():
     insult = adjectives() + nouns()
     return insult
 
+# def bacon_bits():
+#     bacon = "yummy bacon"
+#     print(bacon)
+
 # def pop_counted(a):
 #     pop_counted.counter += 1
 #     return a.pop()
