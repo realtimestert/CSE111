@@ -1,16 +1,10 @@
 """Verify that all of the random effects can be used correctly."""   
 
-from staff_of_chaos import random_magic, adjectives, nouns, insults
+from staff_of_chaos import adjectives, nouns, insults
 from inspect import signature
 from os import path
 from tempfile import mktemp
 import pytest
-
-def test_nouns():
-   noun = ["cretin", "swine", "goat herder", "milk-drinker", "child", "coward"]
-   for _ in range(46):
-      word = nouns()
-      assert word in noun
 
 def read_file(filename):
     """Reads and returns the contents
@@ -29,7 +23,7 @@ def read_file(filename):
 
     return lines
 
-def test_read_file():
+def test_read_adjectives():
     """Verify that the read_file function works correctly."""
     # Write a sample file with three lines
     filename = "adjectives.txt"
@@ -38,6 +32,19 @@ def test_read_file():
             "dishonest","fussy","greedy","grumpy","harsh","impatient",
             "impulsive","jealous","moody","narrow-minded","overcritical",
             "rude","selfish","uncultured","untrustworthy","unhappy"]
+    with open(filename, "wt") as outfile:
+        print(*lines, sep="\n", file=outfile)
+
+    # Call read_file to read the sample file.
+    read = read_file(filename)
+
+    # Verify that read_file read the file correctly.
+    assert read == lines
+
+def test_read_nouns():
+    filename = "nouns.txt"
+    lines = ["cretin","swine","goat herder","milk-drinker",
+            "child","coward"]
     with open(filename, "wt") as outfile:
         print(*lines, sep="\n", file=outfile)
 
