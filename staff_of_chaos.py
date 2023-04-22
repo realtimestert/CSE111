@@ -7,6 +7,7 @@ import time
 current_date_and_time = datetime.now(tz = None)
 
 def main():
+    
     app_window()
 
 def app_window():
